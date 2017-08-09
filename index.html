@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Angular Calculator</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body ng-app="ngcalc">
+
+<div id="header">
+    <h1>ng-Calculator</h1>
+</div>
+
+    <div class="divbody" ng-controller="mycalculator">
+        <div class="btn-row">
+            
+                
+            <div class="digitbox">
+                <p class="input" ng-bind="inputval"></p>
+                <!--<input type="text" ng-modal="inputval" value="" />-->
+            </div>
+            
+            <div class="keypad">
+
+              <div class="keypad-row">
+                  <button class="on" ng-click="reset()">ON</button>
+                  <span ng-class="{'power-on' : power==true, 'power-off' : power==false}"></span>
+              </div>
+                
+              <div class="keypad-row">
+                <div class="numericpad">
+                    <button ng-cloak ng-repeat="num in [1,2,3,4,5,6,7,8,9,0]" ng-click="getval($event, num)" value="{{num}}">{{num}}</button>
+                    <button ng-click="getresult()" class="btn-lg">=</button>
+                </div>
+
+                <div class="sign">
+                    <button ng-click="getoperator( $event , '+')">+</button>
+                    <button ng-click="getoperator( $event , '-')">-</button>
+                    <button ng-click="getoperator( $event , '*')">*</button>
+                    <button ng-click="getoperator( $event , '/')">/</button>
+                    
+                </div>
+              </div>
+            </div>
+            
+        </div>
+        <div class="btn-row"></div>
+    </div>
+
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+
+</body>
+
+</html>

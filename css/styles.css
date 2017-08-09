@@ -1,0 +1,28 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+body { background-color: #fff; }
+#header h1 { font-family: inherit; text-align: center; font-size: 20px;}
+
+.divbody { margin: 0 auto; width: 280px; background-color: #e7e7e7; height: 355px; padding: 20px; border-radius:10px; border: 1px solid #ccc}
+.divbody .digitbox { margin: 0 auto; width: 250px; height: 50px; background-color: #fff; border: 1px solid activeborder; margin-bottom: 20px; border-radius:4px; }
+.divbody .digitbox .input{ width: 98%; height:89%; font-size:36px; margin: 4px; text-align: right; }
+
+.keypad { width: 100%;}
+.keypad-row {} 
+.power-on {background-color: red; float: right; width: 10px; height: 10px; border-radius: 5px; margin-right :13px;  }
+.power-off {background-color: red }
+
+.keypad-row button { margin: 5px 10px; padding: 10px; }
+.keypad-row button.on { margin: 5px; padding: 10px; }
+
+.divbody .numericpad { margin: 0 ; width: 215px; float: left; }
+.numericpad button { margin: 5px; padding: 9px 20px; }
+
+
+.divbody .sign { margin: 0; width: 50px; float: left; }
+.sign button { width: 50px; height: 46px; padding: 0; }
+
+button.btn-lg { width: 122px; margin: 0;}
